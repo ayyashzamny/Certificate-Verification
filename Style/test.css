@@ -1,0 +1,68 @@
+.verifyall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000; /* Add a black stroke around the fieldset */
+}
+
+.column1 {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.column2 {
+    flex: 1;
+    text-align: center;
+}
+
+.things {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Certified {
+    max-width: 120px;
+    margin-top: 20px;
+}
+
+.verify-title {
+    text-align: center;
+    color: #BC0120;
+    margin-bottom: 20px;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 850px) {
+    .row {
+        flex-direction: column; /* Change flex direction to column for mobile */
+        align-items: flex-start; /* Align items to the start for mobile */
+    }
+
+    .Certified {
+        margin-top: 10px;
+
+    }
+
+    .verify-title {
+        font-size: 40px; /* Adjust font size for mobile */
+        text-align: center;
+        color: #BC0120;
+        margin-bottom: 20px;
+    }
+}

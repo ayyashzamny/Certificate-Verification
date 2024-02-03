@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </head>
         <body>
             <div class="details-container">
-                <h2 class="details">Details</h2>
+                <h2 class="details">Verified</h2>
                 <p><strong>Name:</strong> <?php echo $certificateDetails["full_name"];?></p>
                 <p><strong>Course:</strong> <?php echo $certificateDetails["course"];?></p>
                 <p><strong>Issued Date:</strong> <?php echo $certificateDetails["created_at"];?></p>

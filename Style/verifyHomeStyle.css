@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .column1 {
+    float: left;
+    width: 35%;
+    padding: 5px;
+  }
+
+  .column2{
+    float: left;
+    width: 65%;
+    
+  }
+  
+  .row{
+    padding: 0%;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 0%;
+  }
+
+  .verifyall{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    border-radius: 20px;
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-color: rgb(255, 255, 255);
+  }
+
+  .verify-title{
+    color: #960d0d;
+  }
+
+  form {
+    margin-top: 20px;
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    margin-right: 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.verify-btn,
+.clear-btn {
+    background-color: #002370;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 200;
+    transition: border 0.3s;
+}
+
+.verify-btn:hover{
+    background-color: #04339a;
+}
+.clear-btn:hover {
+    background-color: #d83e3e;
+}
+
+
+.clear-btn {
+    background-color: #960d0d;
+}
+
+
+h1{
+    font-size: 30px;
+}
+
+.things{
+    padding: 0;
+    margin-left: 50px;
+}
+
+
+ /* Add this CSS for the green box */
+ .verification-box {
+    max-width: 400px;
+    margin: auto;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Add this CSS for overlay and success message */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.success-message {
+    background-color: #4CAF50; /* Green background color for success message */
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #dc4729; /* Green background color for success message */
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}

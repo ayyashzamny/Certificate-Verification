@@ -1,3 +1,20 @@
+<?php
+session_start();
+require 'db_connection.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get user input
+    $cerID = $_POST["cerID"];
+
+    // SQL query to check if the certificate ID exists in the database
+    $query = "SELECT * FROM certificates WHERE certificate_id = '$cerID'";
+    $result = mysqli_query($connection, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        // Certificate ID exists, fetch and display details
+        $certificateDetails = mysqli_fetch_assoc($result);
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +39,10 @@
       <div class="row">
         <div class="column1">
           <h1 class="verify-title">Verified</h1>
-          <p><strong>Name:</strong> </p>
-          <p><strong>Course:</strong></p>
-          <p><strong>NIC:</strong> </p>
-          <p><strong>Certificate ID:</strong> </p>
+          <p><strong>Name:</strong> <?php echo $certificateDetails["full_name"];?></p>
+          <p><strong>Course:</strong><?php echo $certificateDetails["course"];?></p>
+          <p><strong>NIC:</strong> <?php echo $certificateDetails["created_at"];?></p>
+          <p><strong>Certificate ID:</strong><?php echo $certificateDetails["certificate_id"];?> </p>
           <p><strong>Serial No:</strong> </p>
           <p><strong>Issued Date :</strong> </p>
         </div>
@@ -55,3 +72,16 @@
       <p class="copyright">Developed and Designed by <a href="https://ayyashzamny.github.io/portfolio/" class="mylink">Ayyash Zamny</a></p>
 </body>
 </html>
+
+<?php
+    } else {
+        // Certificate ID not found, show error message
+        $_SESSION['error_message'] = "Certificate ID not found. Please check the ID and try again.";
+        header("location: VerifyHome2.php");
+        exit();
+    }
+}
+
+// Close the database connection
+mysqli_close($connection);
+?>

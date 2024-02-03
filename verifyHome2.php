@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/HeaderFooter.css">
-    <link rel="stylesheet" href="Style/verifyFormtest.css">
+    <link rel="stylesheet" href="Style/verifyHomeStyle.css">
     <title>Verification Page</title>
 </head>
 <body>
@@ -25,8 +25,8 @@
     <h2 class="title">Telecom Training Institute</h2>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="Courses.html" class="active" >Courses</a></li>
-        <li><a href="#Certificate_Verification">Certificate Verification</a></li>
+        <li><a href="Courses.html" >Courses</a></li>
+        <li><a class="active"  href="verifyHome2.php">Certificate Verification</a></li>
     </ul>
 
     
@@ -39,7 +39,7 @@
         <div class="column2">
           <div class="things">
             <h1 class="verify-title">Verify Certificate</h1>
-            <form method="post" action="verifyForm.php">
+            <form method="post" action="FianlResults.php">
                 <label for="cerID">Certificate ID:</label>
                 <input type="text" id="cerID" name="cerID" placeholder="eg : 789PQR456XYZ" required>
                 <br><br>
