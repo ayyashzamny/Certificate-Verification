@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p><strong>Certificate ID:</strong> <?php echo $certificateDetails["certificate_id"];?></p>
             </div>
             <div class="btc">
-                <a href="VerifyHome.php" class="back-to-checking">Back to Checking</a>
+                <a href="VerifyHome2.php" class="back-to-checking">Back to Checking</a>
             </div>
         </body>
         </html>
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // Certificate ID not found, show error message
         $_SESSION['error_message'] = "Certificate ID not found. Please check the ID and try again.";
-        header("location: VerifyHome.php");
+        header("location: VerifyHome2.php");
         exit();
     }
 }

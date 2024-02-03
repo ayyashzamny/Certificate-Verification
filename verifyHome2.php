@@ -8,43 +8,66 @@
             echo '</div>';
             unset($_SESSION['error_message']);
         }
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/VerifyHome.css">
     <link rel="stylesheet" href="Style/HeaderFooter.css">
+    <link rel="stylesheet" href="Style/verifyFormtest.css">
     <title>Verification Page</title>
 </head>
 <body>
 
-        
+    <img src="img/tti_logo.jpg" alt="logo" class="logo">
+    <h2 class="title">Telecom Training Institute</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Courses.html" class="active" >Courses</a></li>
+        <li><a href="#Certificate_Verification">Certificate Verification</a></li>
+    </ul>
 
+    
 
-
-    <div class="Car-container">
-        <div class="logo-container">
-            <img src="img/verify.jpg" alt="Logo">
+    <fieldset class="verifyall">
+      <div class="row">
+        <div class="column1">
+          <img src="img/verify.jpg" alt="Snow" style="width:100%" class="logoForm">
         </div>
-
-        <div class="form-container">
-            <h1>Verify Certificates</h1>
+        <div class="column2">
+          <div class="things">
+            <h1 class="verify-title">Verify Certificate</h1>
             <form method="post" action="verifyForm.php">
-
                 <label for="cerID">Certificate ID:</label>
                 <input type="text" id="cerID" name="cerID" placeholder="eg : 789PQR456XYZ" required>
                 <br><br>
                 <button type="submit" class="verify-btn">Verify</button>
                 <button type="reset" class="clear-btn">Clear</button>
-            </form>     
+            </form> 
         </div>
-    </div>
+      </div>
+          
+      </div>
+    </fieldset>
 
 
-    <script>
+
+      <div class="footer">
+        <div class="links">
+          <h3>Quick Links</h3>
+          <p>Home</p>
+          <p>Courses</p>
+          <p>Verification</p>
+        </div>
+        
+        <img src="img/tti_logoFooter.jpg" alt="Footer_Logo" class="Footer-logo">
+        
+      </div>
+      <p class="copyright">Developed and Designed by <a href="https://ayyashzamny.github.io/portfolio/" class="mylink">Ayyash Zamny</a></p>
+
+      <script>
         document.addEventListener('DOMContentLoaded', function() {
             var overlay = document.getElementById('Eoverlay');
             if (overlay) {
@@ -55,8 +78,5 @@
         });
     </script>
 
-
-
-
-</body>
+    </body>
 </html>

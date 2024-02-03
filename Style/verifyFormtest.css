@@ -1,44 +1,54 @@
-/* styles.css */
-/*
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f2f2f2;
-}
-*/
-.Car-container {
+* {
+    box-sizing: border-box;
+  }
+  
+  .column1 {
+    float: left;
+    width: 35%;
+    padding: 5px;
+  }
+
+  .column2{
+    float: left;
+    width: 65%;
+    
+  }
+  
+  .row{
+    padding: 0%;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 0%;
+  }
+
+  .verifyall{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    border-radius: 20px;
     display: flex;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
     overflow: hidden;
-}
+    border-color: rgb(255, 255, 255);
+  }
 
-.logo-container {
-    flex: 1;
-    text-align: left;
-}
+  .verify-title{
+    color: #960d0d;
+  }
 
-.logo-container img {
-    max-width: 200px;
-    height: auto;
-}
-
-.form-container {
-    flex: 1;
-    padding-left: 20px;
-    text-align: left;
-}
-
-form {
+  form {
     margin-top: 20px;
+    margin-right: 0;
 }
 
 label {
@@ -50,6 +60,7 @@ input {
     width: 100%;
     padding: 10px;
     margin-bottom: 16px;
+    margin-right: 0;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -57,7 +68,7 @@ input {
 
 .verify-btn,
 .clear-btn {
-    background-color: #3498db;
+    background-color: #002370;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -68,7 +79,7 @@ input {
 }
 
 .verify-btn:hover{
-    background-color: #70bef1;
+    background-color: #04339a;
 }
 .clear-btn:hover {
     background-color: #d83e3e;
@@ -83,6 +94,12 @@ input {
 h1{
     font-size: 30px;
 }
+
+.things{
+    padding: 0;
+    margin-left: 50px;
+}
+
 
  /* Add this CSS for the green box */
  .verification-box {

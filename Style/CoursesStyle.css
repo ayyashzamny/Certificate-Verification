@@ -1,0 +1,40 @@
+/*Content*/
+
+.CourseCont {
+    background-color: #eeeeee;
+    border-radius: 20px ;
+    border-color: #BC0120  ;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+  }
+  
+  .row {
+    display: flex;
+    
+  }
+  
+  .column {
+    padding: 15px;
+  }
+  
+  .column1 {
+    padding: 15px;
+    color: #404040;
+  }
+  
+  .CourseName{
+    color: #BC0120;
+  }
+
+  h2,h4{
+    color: #002370;
+  }
+
+  .CourseTitle{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: #BC0120;
+    font-size: 250%;
+  }
