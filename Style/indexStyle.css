@@ -71,8 +71,8 @@ ul {
   .slideshow{
     margin-top: 50px;
     margin-bottom: 14px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   /*About section*/
@@ -85,9 +85,33 @@ ul {
   }
 
   .aboutCont{
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
     color: #002370;
     text-align: justify;
     font-size: 100%;
   }
+
+  /*Footer*/
+
+  .footer {
+    background-color: #002370;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 80px;
+  }
+  
+  .links {
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 100px; /* Pushes the links to the left */
+  }
+  
+  .Footer-logo {
+    width: 10%;
+    border-radius: 50%;
+    margin-right: 100px; /* Removes the default margin for the image */
+  }
+  
