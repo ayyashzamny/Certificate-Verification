@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cerID = $_POST["cerID"];
 
     // SQL query to check if the certificate ID exists in the database
-    $query = "SELECT * FROM certificates WHERE certificate_id = '$cerID'";
+    $query = "SELECT * FROM certificates WHERE CerID = '$cerID'";
     $result = mysqli_query($connection, $query);
 
     if (mysqli_num_rows($result) > 0) {

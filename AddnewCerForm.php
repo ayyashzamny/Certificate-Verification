@@ -19,14 +19,27 @@ if(isset($_SESSION['success_message'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/AddnewCer.css">
+    <link rel="stylesheet" href="Style/AddnewCerForm.css">
     <style>
        
     </style>
-    <title>Registration Form</title>
+    <title>Certificate Deatils Form</title>
 </head>
+<style>
+    .logo{
+        width: 100px;
+    }
+</style>
 <body>
+
+    <ul>
+        <li><a href="AddnewCerForm.php">Add new Certificate</a></li>
+        <li><a href="EditDetails.php">All Deatils</a></li>
+        <li style="float:right"><a class="active" href="#about">LogOut</a></li>
+    </ul>
+<br><br>
     <div class="registration-container">
+        <img src="img/tti_logo.jpg" alt="logo" class="logo">
         <div class="form-container">
             <h1>Add new Certificate</h1>
             <form method="post" action="AddnewCer.php">
@@ -38,6 +51,15 @@ if(isset($_SESSION['success_message'])) {
 
                 <label for="certificateID">Certificate ID:</label>
                 <input type="text" id="certificateID" name="certificateID" required>
+
+                <label for="NIC">NIC:</label>
+                <input type="text" id="NIC" name="NIC" required>
+
+                <label for="SerialNo">Serial No:</label>
+                <input type="text" id="SerialNo" name="SerialNo" required>
+
+                <label for="IssuedDate">Issued Date:</label>
+                <input type="date" id="IssuedDate" name="IssuedDate" required>
 
                 <button type="submit" class="submit-btn">Submit</button>
                 <button type="button" class="clear-btn">Clear</button>

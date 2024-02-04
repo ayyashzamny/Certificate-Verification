@@ -2,7 +2,7 @@
     $host = "localhost";
     $user = "root";
     $password = "";
-    $database = "exproject1";
+    $database = "db_tti";
 
     $connection = mysqli_connect($host, $user, $password, $database);
 

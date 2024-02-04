@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cerID = $_POST["cerID"];
 
     // SQL query to check if the certificate ID exists in the database
-    $query = "SELECT * FROM certificates WHERE certificate_id = '$cerID'";
+    $query = "SELECT * FROM certificates WHERE CerID = '$cerID'";
     $result = mysqli_query($connection, $query);
 
     if (mysqli_num_rows($result) > 0) {
@@ -40,12 +40,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="row">
         <div class="column1">
           <h1 class="verify-title">Verified</h1>
-          <p><strong>Name:</strong> <?php echo $certificateDetails["full_name"];?></p>
-          <p><strong>Course:</strong><?php echo $certificateDetails["course"];?></p>
-          <p><strong>NIC:</strong> <?php echo $certificateDetails["created_at"];?></p>
-          <p><strong>Certificate ID:</strong><?php echo $certificateDetails["certificate_id"];?> </p>
-          <p><strong>Serial No:</strong> </p>
-          <p><strong>Issued Date :</strong> </p>
+          <p><strong>Name:</strong> <?php echo $certificateDetails["Name"];?></p>
+          <p><strong>Course:</strong> <?php echo $certificateDetails["Course"];?></p>
+          <p><strong>NIC:</strong> <?php echo $certificateDetails["NIC"];?></p>
+          <p><strong>Certificate ID:</strong> <?php echo $certificateDetails["CerID"];?> </p>
+          <p><strong>Serial No:</strong> <?php echo $certificateDetails["SerialNo"];?></p>
+          <p><strong>Issued Date :</strong> <?php echo $certificateDetails["Date"];?></p>
         </div>
         <div class="column2">
           <div class="things">

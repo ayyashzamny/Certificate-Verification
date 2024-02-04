@@ -9,10 +9,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullName = $_POST["fullName"];
     $course = $_POST["course"];
     $certificateID = $_POST["certificateID"];
+    $NIC = $_POST["NIC"];
+    $SerialNo = $_POST["SerialNo"];
+    $IssuedDate = $_POST["IssuedDate"];
 
     // Check if the certificate ID already exists in the database
-    $checkQuery = "SELECT * FROM certificates WHERE certificate_id = '$certificateID'";
+    $checkQuery = "SELECT * FROM certificates WHERE CerID = '$certificateID'";
     $checkResult = mysqli_query($connection, $checkQuery);
+
+    if ($checkResult === false) {
+        die("Error in check query: " . mysqli_error($connection));
+    }
 
     if (mysqli_num_rows($checkResult) > 0) {
         $_SESSION['error_message'] = "Certificate ID already exists. Please choose a different one.";
@@ -20,11 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    // Get the current date and time
-    $currentDateTime = date("Y-m-d H:i:s");
+   
 
     // SQL query to insert certificate data into the database, including the current date and time
-    $insertQuery = "INSERT INTO certificates (full_name, course, certificate_id, created_at) VALUES ('$fullName', '$course', '$certificateID', '$currentDateTime')";
+    $insertQuery = "INSERT INTO certificates (`Name`, Course, NIC ,CerID, SerialNo, `Date`) 
+    VALUES ('$fullName', '$course', '$NIC' , '$certificateID', '$SerialNo' , '$IssuedDate')";
+    
     $result = mysqli_query($connection, $insertQuery);
 
     if ($result) {
