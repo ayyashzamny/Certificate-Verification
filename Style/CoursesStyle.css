@@ -16,12 +16,19 @@
   
   .column {
     padding: 15px;
+
   }
   
   .column1 {
     padding: 15px;
     color: #404040;
   }
+
+  .p2{
+    width: 300px;
+    border-radius: 100%;
+  }
+  
   
   .CourseName{
     color: #BC0120;
@@ -38,3 +45,71 @@
     color: #BC0120;
     font-size: 250%;
   }
+
+/* Course List */
+.course-list {
+  list-style-type: disc; /* Use disc for bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.course-list li {
+  margin-left: 40px;
+  padding: 1px;
+  color: #002370;
+}
+
+/*For the course 2*/
+
+.course-list {
+  margin-bottom: 20px;
+}
+
+.course-list h2 {
+  color: #BC0120;
+}
+
+.course-list h3 {
+  color: #002370;
+  margin-top: 10px;
+}
+
+.course-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.course-list li {
+  color: #002370;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.course-list .course-code {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Add additional styles as needed */
+
+
+.course-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.stage {
+  font-weight: bold;
+  color: #007bff;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+

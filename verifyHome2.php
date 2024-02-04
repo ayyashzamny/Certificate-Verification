@@ -23,10 +23,10 @@
 
     <img src="img/tti_logo.jpg" alt="logo" class="logo">
     <h2 class="title">Telecom Training Institute</h2>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Courses.html" >Courses</a></li>
-        <li><a class="active"  href="verifyHome2.php">Certificate Verification</a></li>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Courses.html">Courses</a></li>
+      <li><a class="active" href="VerifyHome2.php">Certificate Verification</a></li>
     </ul>
 
     

@@ -28,10 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <img src="img/tti_logo.jpg" alt="logo" class="logo">
     <h2 class="title">Telecom Training Institute</h2>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Courses.html"  >Courses</a></li>
-        <li><a href="verifyHome2.php" class="active">Back to Verification</a></li>
+    
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Courses.html">Courses</a></li>
+      <li><a class="active" href="VerifyHome2.php">Back to Verification</a></li>
     </ul>
 
     
