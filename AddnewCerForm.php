@@ -1,5 +1,16 @@
 <?php
-session_start();
+
+    session_start();
+
+    // Check if the user is not logged in, redirect to login page
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.html");
+        exit();
+    }
+
+?>
+
+<?php
 if(isset($_SESSION['success_message'])) {
     echo '<div id="overlay" class="overlay">';
     echo '  <div class="success-message">' . $_SESSION['success_message'] . '</div>';
@@ -35,7 +46,7 @@ if(isset($_SESSION['success_message'])) {
     <ul>
         <li><a href="AddnewCerForm.php">Add new Certificate</a></li>
         <li><a href="EditDetails.php">All Deatils</a></li>
-        <li style="float:right"><a class="active" href="#about">LogOut</a></li>
+        <li style="float:right"><a class="active" href="logout.php">LogOut</a></li>
     </ul>
 <br><br>
     <div class="registration-container">

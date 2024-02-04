@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($result) > 0) {
         // Certificate ID exists, fetch and display details
         $certificateDetails = mysqli_fetch_assoc($result);
-        ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">

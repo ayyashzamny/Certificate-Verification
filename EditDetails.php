@@ -1,9 +1,21 @@
 <?php
+
+    session_start();
+
+    // Check if the user is not logged in, redirect to login page
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.html");
+        exit();
+    }
+
+?>
+
+<?php
 // Include your database connection file
 include("db_connection.php");
 
 // Fetch certificates data from the database
-$query = "SELECT * FROM certificates";
+$query = "SELECT * FROM certificates ORDER BY ID DESC";
 $result = mysqli_query($connection, $query);
 
 // Check if there are any certificates
@@ -30,7 +42,7 @@ mysqli_close($connection);
     <ul>
         <li><a href="AddnewCerForm.php">Add new Certificate</a></li>
         <li><a href="EditDetails.php" >All Deatils</a></li>
-        <li style="float:right"><a href="#about"class="active">LogOut</a></li>
+        <li style="float:right"><a href="logout.php"class="active">LogOut</a></li>
     </ul>
 
 <h2>Certificates Table</h2>
