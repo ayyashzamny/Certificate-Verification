@@ -57,7 +57,8 @@ mysqli_close($connection);
             <th>Certificate ID</th>
             <th>Serial No</th>
             <th>Date</th>
-            <th>Actions</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -70,10 +71,8 @@ mysqli_close($connection);
                 <td><?php echo $certificate['CerID']; ?></td>
                 <td><?php echo $certificate['SerialNo']; ?></td>
                 <td><?php echo $certificate['Date']; ?></td>
-                <td>
-                    <a href="edit.php?id=<?php echo $certificate['ID']; ?>" class="edit-btn">Edit</a>
-                    <a href="delete.php?id=<?php echo $certificate['ID']; ?>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this certificate?')">Delete</a>
-                </td>
+                <td><a href="edit.php?id=<?php echo $certificate['ID']; ?>" class="edit-btn">Edit</a></td>
+                <td><a href="delete.php?id=<?php echo $certificate['ID']; ?>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this certificate?')">Delete</a></td>             
             </tr>
         <?php endforeach; ?>
     </tbody>
