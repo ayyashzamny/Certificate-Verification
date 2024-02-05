@@ -4,16 +4,17 @@
 
 .column1 {
   float: left;
-  width: 100%;
+  width: 35%;
   padding: 5px;
 }
 
-.column2 {
+.column2{
   float: left;
-  width: 100%;
+  width: 65%;
+  
 }
 
-.row {
+.row{
   padding: 0%;
 }
 
@@ -25,12 +26,12 @@
   padding: 0%;
 }
 
-.verifyall {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.verifyall{
+  margin-top: 100px;
+  margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 600px; /* Adjust the max-width as needed */
+  width: 35%;
   border-radius: 20px;
   display: flex;
   background-color: #fff;
@@ -41,7 +42,7 @@
   border-color: rgb(255, 255, 255);
 }
 
-.verify-title {
+.verify-title{
   color: #960d0d;
 }
 
@@ -74,29 +75,31 @@ input {
   border-radius: 4px;
   cursor: pointer;
   font-weight: 200;
-  transition: 0.3s;
+  transition: border 0.3s;
 }
 
-.verify-btn:hover {
+.verify-btn:hover{
   background-color: #04339a;
 }
-
 .clear-btn:hover {
   background-color: #d83e3e;
 }
+
 
 .clear-btn {
   background-color: #960d0d;
 }
 
-h1 {
+
+h1{
   font-size: 30px;
 }
 
-.things {
+.things{
   padding: 0;
-  margin-left: 10px;
+  margin-left: 50px;
 }
+
 
 /* Add this CSS for the green box */
 .verification-box {
@@ -139,4 +142,3 @@ h1 {
   border-radius: 5px;
   text-align: center;
 }
- 

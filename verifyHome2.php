@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/HeaderFooter.css">
-    <link rel="stylesheet" href="Style/verifyHomeStyle.css">
+    <link rel="stylesheet" href="Style/VerifyHome.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -29,6 +29,8 @@
     <title>Certificate Verification</title>
 </head>
 <body>
+
+    
 
     <img src="img/tti_logo.jpg" alt="logo" class="logo">
     <h2 class="title">Telecom Training Institute</h2>
@@ -44,7 +46,7 @@
     <fieldset class="verifyall">
       <div class="row">
         <div class="column1">
-          <img src="img/verify.jpg" alt="Snow" style="width:100%" class="logoForm">
+          <img src="img/verify.jpg"  style="width:10vw" class="logoForm">
         </div>
         <div class="column2">
           <div class="things">
