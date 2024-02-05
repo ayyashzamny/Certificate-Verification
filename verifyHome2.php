@@ -35,6 +35,7 @@
     <ul class="navbar">
       <li><a href="index.html">Home</a></li>
       <li><a href="Courses.html">Courses</a></li>
+      <li><a href="contectus.html">Conatact us</a></li>
       <li><a class="active" href="VerifyHome2.php">Certificate Verification</a></li>
     </ul>
 

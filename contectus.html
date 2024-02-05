@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-hnvHFq2Ku8Jf6IizP0pdU94TM3rNlyl0QKIlc6U6qg9pTo2J4t1Kb/JwpfFjApg8ufrB0SdMfUYmGfpZ4t4e9mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Style/indexStyle.css">
+    <link rel="stylesheet" href="Style/HeaderFooter.css">
+    <link rel="stylesheet" href="Style/contactForm.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Contact Us</title>
+</head>
+<body>
+
+    <!-- Page up Button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div class="container">
+        <img src="img/tti_logo.jpg" alt="logo" class="logo">
+        <h2 class="title">Telecom Training Institute</h2>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a class="active"  href="contectus.html">Contact us</a></li>
+            <li><a href="VerifyHome2.php">Certificate Verification</a></li>
+        </ul>
+
+
+
+        <!-- Contact Form -->
+        <form class="contact-form">
+
+            <h2>Inquiry form</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone No:</label>
+            <input type="number" id="phone" name="phone" required>
+
+            <label for="inquiry">Inquiry:</label>
+            <textarea id="inquiry" name="inquiry" rows="4" required></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="clear-btn">Clear</button>
+        </form>
+    </div>
+
+    <div class="loc">
+        <h2>Location</h2>
+
+        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0673582925397!2d79.8939481750782!3d6.882534593116375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25baab26e788d%3A0x8f0b509ba4869532!2sTelecom%20Training%20Institute(TTI)!5e0!3m2!1sen!2slk!4v1707128340050!5m2!1sen!2slk" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+
+
+            <!-- Contact Information Box -->
+            <div class="contact-info-box">
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <p>Phone<br>+94 77 34739 36</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <p>Phone<br>+94 76 9892 828</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Address<br>9/87A, 6TH LANE, PAGODA RD, NUGEGODA | SRI LANKA</p>
+                </div>
+            </div>
+
+
+            
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="links">
+            <h3>Quick Links</h3>
+            <p>Home</p>
+            <p>Courses</p>
+            <p>Contact us</p>
+            <p>Verification</p>
+        </div>
+        <img src="img/tti_logoFooter.jpg" alt="Footer_Logo" class="Footer-logo">
+    </div>
+
+    <p class="copyright">Developed and Designed by <a href="https://ayyashzamny.github.io/portfolio/" class="mylink">Ayyash Zamny</a></p>
+
+    <script>
+        // Scroll to top button functionality
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>
