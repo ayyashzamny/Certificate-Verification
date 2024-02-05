@@ -71,7 +71,8 @@
           <h3>Quick Links</h3>
           <p>Home</p>
           <p>Courses</p>
-          <p>Verification</p>
+          <p>Conatact us</p>
+          <p>Certificate Verification</p>
         </div>
         
         <img src="img/tti_logoFooter.jpg" alt="Footer_Logo" class="Footer-logo">
