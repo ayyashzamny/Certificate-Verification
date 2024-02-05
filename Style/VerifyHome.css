@@ -1,63 +1,74 @@
-/* styles.css */
-/*
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f2f2f2;
-}
-*/
-.Car-container {
+* {
+    box-sizing: border-box;
+  }
+  
+  .column1 {
+    float: left;
+    width: 30%;
+    padding: 5px;
+  }
+  
+  .column2{
+    float: left;
+    width: 70%;
+    
+  }
+  
+  .row{
+    padding: 0%;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 0%;
+  }
+  
+  .verifyall{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    border-radius: 20px;
     display: flex;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
     overflow: hidden;
-}
-
-.logo-container {
-    flex: 1;
-    text-align: left;
-}
-
-.logo-container img {
-    max-width: 200px;
-    height: auto;
-}
-
-.form-container {
-    flex: 1;
-    padding-left: 20px;
-    text-align: left;
-}
-
-form {
+    border-color: rgb(255, 255, 255);
+  }
+  
+  .verify-title{
+    color: #960d0d;
+  }
+  
+  form {
     margin-top: 20px;
-}
-
-label {
+    margin-right: 0;
+  }
+  
+  label {
     display: block;
     margin-bottom: 8px;
-}
-
-input {
+  }
+  
+  input {
     width: 100%;
     padding: 10px;
     margin-bottom: 16px;
+    margin-right: 0;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-.verify-btn,
-.clear-btn {
-    background-color: #3498db;
+  }
+  
+  .verify-btn,
+  .clear-btn {
+    background-color: #002370;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -65,27 +76,33 @@ input {
     cursor: pointer;
     font-weight: 200;
     transition: border 0.3s;
-}
-
-.verify-btn:hover{
-    background-color: #70bef1;
-}
-.clear-btn:hover {
+  }
+  
+  .verify-btn:hover{
+    background-color: #04339a;
+  }
+  .clear-btn:hover {
     background-color: #d83e3e;
-}
-
-
-.clear-btn {
+  }
+  
+  
+  .clear-btn {
     background-color: #960d0d;
-}
-
-
-h1{
+  }
+  
+  
+  h1{
     font-size: 30px;
-}
-
- /* Add this CSS for the green box */
- .verification-box {
+  }
+  
+  .things{
+    padding: 0;
+    margin-left: 50px;
+  }
+  
+  
+  /* Add this CSS for the green box */
+  .verification-box {
     max-width: 400px;
     margin: auto;
     background-color: #4CAF50;
@@ -93,10 +110,10 @@ h1{
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-}
-
-/* Add this CSS for overlay and success message */
-.overlay {
+  }
+  
+  /* Add this CSS for overlay and success message */
+  .overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -108,20 +125,32 @@ h1{
     justify-content: center;
     align-items: center;
     z-index: 1000;
-}
-
-.success-message {
+  }
+  
+  .success-message {
     background-color: #4CAF50; /* Green background color for success message */
     color: #fff;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-}
-
-.error-message {
+  }
+  
+  .error-message {
     background-color: #dc4729; /* Green background color for success message */
     color: #fff;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-}
+  }
+
+  /* Media Query for responsiveness */
+@media only screen and (max-width: 940px) {
+    .verifyall {
+      flex-direction: column; /* Change to column layout on small screens */
+    }
+  
+    .column1,
+    .column2 {
+      width: 100%; /* Make each column take full width on small screens */
+    }
+  }
