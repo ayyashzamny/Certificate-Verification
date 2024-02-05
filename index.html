@@ -5,14 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/indexStyle.css">
     <link rel="stylesheet" href="Style/HeaderFooter.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <title>Home</title>
 </head>
 <body>
+
+  <!--Page up Button-->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        
+        
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+      } else {
+      mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  
+  
     <img src="img/tti_logo.jpg" alt="logo" class="logo">
     <h2 class="title">Telecom Training Institute</h2>
     <ul class="navbar">
       <li><a class="active" href="index.html">Home</a></li>
       <li><a href="Courses.html">Courses</a></li>
+      <li><a href="contectus.html">Conatact us</a></li>
       <li><a href="VerifyHome2.php">Certificate Verification</a></li>
     </ul>
 
@@ -42,8 +80,8 @@
           }
       </script>
 
-
       <h2 class="aboutTitle">About us</h2>
+      
       <p class="aboutCont"> 
         In the quiet town of Loran, where time seemed to move at its own unhurried pace, the cobblestone streets told stories of bygone eras. Historic buildings, adorned with intricate architectural details, stood as silent witnesses to the passage of time. The aroma of freshly baked bread wafted from the local bakery, enticing residents and visitors alike. Loran's charm was found not only in its physical beauty but also in the warmth of its community. Neighbors greeted each other with smiles, creating a sense of camaraderie that echoed through the town square. As the sun dipped below the horizon, casting a warm glow on the quaint shops, Loran embraced a timeless tranquility that made it a haven for those seeking a respite from the bustling outside world.
         Nestled between rolling hills and vast meadows, Loran's natural beauty painted a picturesque landscape. A gentle stream meandered through the heart of the town, its waters reflecting the vibrant hues of the surrounding flora. Lush greenery and colorful wildflowers adorned the landscape, creating a breathtaking canvas that changed with the seasons. In the distance, a centuries-old oak tree stood tall, its branches reaching towards the sky as if reaching for the stars. The air in Loran was filled with the symphony of chirping birds and the rustling of leaves, creating a serene ambiance. It was a place where time felt suspended, allowing residents to savor the simple joys of life and connect with the timeless beauty of nature.
@@ -55,41 +93,33 @@
 
         <div class="column">
           <div class="card">
-            <img src="img/sample.png" alt="Denim Jeans" style="width:100%">
-            <h1>Sample</h1>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <img src="img/ef.png" style="width:100%">
+            <h1>Expert Faculty</h1>
+            <p> Our faculty comprises seasoned professionals and academics who bring a wealth of knowledge and experience to the classroom.</p>
           </div>
         </div>
 
         <div class="column">
           <div class="card">
-            <img src="img/sample.png" alt="Denim Jeans" style="width:100%">
-            <h1>Sample</h1>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <img src="img/saf.png" style="width:100%">
+            <h1>State-of-the-Art Facilities</h1>
+            <p>Learn with the latest technology and software in our labs and classrooms designed to simulate real-world telecommunications environments. </p>
           </div>
         </div>
 
         <div class="column">
           <div class="card">
-            <img src="img/sample.png" alt="Denim Jeans" style="width:100%">
-            <h1>Sample</h1>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>  
+            <img src="img/cs.png" style="width:100%">
+            <h1>Career Services</h1>
+            <p> Our dedicated career services team works tirelessly to connect our graduates with job opportunities in the telecom industry and beyond.</p>  
           </div>
         </div>
 
         <div class="column">
           <div class="card">
-            <img src="img/sample.png" alt="Denim Jeans" style="width:100%">
-            <h1>Sample</h1>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>  
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="card">
-            <img src="img/sample.png" alt="Denim Jeans" style="width:100%">
-            <h1>Sample</h1>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>  
+            <a href="Login.html"><img src="img/ic.png" style="width:100%"></a>
+            <h1>Industry Connections</h1>
+            <p>Benefit from our strong ties with leading companies in the telecommunications sector for internships and job placements.</p>  
           </div>
         </div>
 

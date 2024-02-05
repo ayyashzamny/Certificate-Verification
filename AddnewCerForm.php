@@ -1,5 +1,16 @@
 <?php
-session_start();
+
+    session_start();
+
+    // Check if the user is not logged in, redirect to login page
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.html");
+        exit();
+    }
+
+?>
+
+<?php
 if(isset($_SESSION['success_message'])) {
     echo '<div id="overlay" class="overlay">';
     echo '  <div class="success-message">' . $_SESSION['success_message'] . '</div>';
@@ -19,6 +30,15 @@ if(isset($_SESSION['success_message'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
     <link rel="stylesheet" href="Style/AddnewCerForm.css">
     <style>
        
@@ -35,7 +55,7 @@ if(isset($_SESSION['success_message'])) {
     <ul>
         <li><a href="AddnewCerForm.php">Add new Certificate</a></li>
         <li><a href="EditDetails.php">All Deatils</a></li>
-        <li style="float:right"><a class="active" href="#about">LogOut</a></li>
+        <li style="float:right"><a class="active" href="logout.php">LogOut</a></li>
     </ul>
 <br><br>
     <div class="registration-container">

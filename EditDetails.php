@@ -1,9 +1,21 @@
 <?php
+
+    session_start();
+
+    // Check if the user is not logged in, redirect to login page
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.html");
+        exit();
+    }
+
+?>
+
+<?php
 // Include your database connection file
 include("db_connection.php");
 
 // Fetch certificates data from the database
-$query = "SELECT * FROM certificates";
+$query = "SELECT * FROM certificates ORDER BY ID DESC";
 $result = mysqli_query($connection, $query);
 
 // Check if there are any certificates
@@ -22,6 +34,15 @@ mysqli_close($connection);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <title>Certificates Table</title>
     <link rel="stylesheet" href="Style/EditDetailsStyle.css"> <!-- Link to your CSS file -->
 </head>
@@ -30,7 +51,7 @@ mysqli_close($connection);
     <ul>
         <li><a href="AddnewCerForm.php">Add new Certificate</a></li>
         <li><a href="EditDetails.php" >All Deatils</a></li>
-        <li style="float:right"><a href="#about"class="active">LogOut</a></li>
+        <li style="float:right"><a href="logout.php"class="active">LogOut</a></li>
     </ul>
 
 <h2>Certificates Table</h2>
@@ -45,7 +66,8 @@ mysqli_close($connection);
             <th>Certificate ID</th>
             <th>Serial No</th>
             <th>Date</th>
-            <th>Actions</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -58,10 +80,8 @@ mysqli_close($connection);
                 <td><?php echo $certificate['CerID']; ?></td>
                 <td><?php echo $certificate['SerialNo']; ?></td>
                 <td><?php echo $certificate['Date']; ?></td>
-                <td>
-                    <a href="edit.php?id=<?php echo $certificate['ID']; ?>" class="edit-btn">Edit</a>
-                    <a href="delete.php?id=<?php echo $certificate['ID']; ?>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this certificate?')">Delete</a>
-                </td>
+                <td><a href="edit.php?id=<?php echo $certificate['ID']; ?>" class="edit-btn">Edit</a></td>
+                <td><a href="delete.php?id=<?php echo $certificate['ID']; ?>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this certificate?')">Delete</a></td>             
             </tr>
         <?php endforeach; ?>
     </tbody>
